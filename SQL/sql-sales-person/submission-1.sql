@@ -1,0 +1,2 @@
+-- Write your query below
+SELECT sales_person.name FROM sales_person WHERE NOT EXISTS(SELECT orders.order_id FROM orders JOIN company ON orders.com_id=company.com_id AND company.name='CRIMSON' WHERE sales_person.sales_id=orders.sales_id);
